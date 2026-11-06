@@ -634,3 +634,4 @@ html:not(.js) .opening__cap[data-cap="0"]{opacity:1;visibility:visible}
   .toc__all[open] .toc__sum{margin-bottom:4px}
 }
 .reels .reel,.vcard--type{outline:1px solid rgba(230,203,142,.16);outline-offset:-1px}
+@media (max-width:480px){.vcard__type-q,.reels .vcard__type-q{font-size:clamp(32px,9.5vw,42px)!important;line-height:1!important}} /* titres des cartes sur 2 lignes max en 390 px (jury 06/11) */
