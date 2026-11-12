@@ -538,7 +538,12 @@ section[id],h2,h3{scroll-margin-top:96px}
   .hero__media{top:0;bottom:auto;height:calc(100vw * 1.25 + 20px)}
   .hero__media img{object-position:50% 0;transform-origin:50% 0;transform:none}
   .js .hero__media img{animation-name:heroInM}
-  .hero__shade{background:linear-gradient(180deg,rgba(10,14,23,.78) 0%,rgba(10,14,23,.3) 9%,rgba(10,14,23,0) 15%,rgba(10,14,23,0) 38%,rgba(10,14,23,.72) 47%,rgba(10,14,23,.94) 54%,var(--ink) 59%)}
+  /* 12/11: the text is anchored to the photo, not to the screen height (a short screen pushed the title up onto the face and the diplomas) */
+  .hero{justify-content:flex-start}
+  .hero__content{margin-top:80vw;display:flex;flex-direction:column;align-items:flex-start}
+  .hero__actions{align-self:stretch}
+  .hero__foot{margin-top:auto}
+  .hero__shade{background:linear-gradient(180deg,rgba(10,14,23,.78) 0,rgba(10,14,23,.3) 18vw,rgba(10,14,23,0) 30vw,rgba(10,14,23,0) 64vw,rgba(10,14,23,.62) 82vw,rgba(10,14,23,.92) 98vw,var(--ink) 118vw)}
   .hero__title{font-size:clamp(58px,16vw,80px)}
   .opening__cta{gap:6px 22px}
   .opening__cta .btn{--h:52px}
@@ -635,3 +640,8 @@ html:not(.js) .opening__cap[data-cap="0"]{opacity:1;visibility:visible}
 }
 .reels .reel,.vcard--type{outline:1px solid rgba(230,203,142,.16);outline-offset:-1px}
 @media (max-width:480px){.vcard__type-q,.reels .vcard__type-q{font-size:clamp(32px,9.5vw,42px)!important;line-height:1!important}} /* titres des cartes sur 2 lignes max en 390 px (jury 06/11) */
+
+@media (max-width:767px) and (max-height:760px){
+  .hero__actions{order:2;margin-top:22px}
+  .hero__lead{order:3;margin-top:26px}
+}
